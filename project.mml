@@ -1093,7 +1093,9 @@ Layer:
       table: |-
         (SELECT
             way,
-            admin_level
+            admin_level,
+            tags->'claimed_by' AS claimed_by,
+            tags->'disputed_by' AS disputed_by
           FROM planet_osm_roads
           WHERE boundary = 'administrative'
             AND admin_level IN ('0', '1', '2', '3', '4')
@@ -1111,7 +1113,9 @@ Layer:
       table: |-
         (SELECT
             way,
-            admin_level
+            admin_level,
+            tags->'claimed_by' AS claimed_by,
+            tags->'disputed_by' AS disputed_by
           FROM planet_osm_roads
           WHERE boundary = 'administrative'
             AND admin_level IN ('0', '1', '2', '3', '4', '5', '6', '7', '8')
@@ -1129,7 +1133,9 @@ Layer:
       table: |-
         (SELECT
             way,
-            admin_level
+            admin_level,
+            tags->'claimed_by' AS claimed_by,
+            tags->'disputed_by' AS disputed_by
           FROM planet_osm_roads
           WHERE boundary = 'administrative'
             AND admin_level IN ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10')

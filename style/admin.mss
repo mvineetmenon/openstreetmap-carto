@@ -320,6 +320,12 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
   ::wideline,
   ::narrowline { comp-op: darken; }
 
+  [admin_level = '2'][disputed_by = 'India'] {
+    ::firstline { opacity: 0; }
+    ::wideline { opacity: 0; }
+    ::narrowline { opacity: 0; }
+  }
+
   [admin_level = '5'][zoom >= 8]::firstline {
     background/line-join: bevel;
     background/line-color: white;
